@@ -2,13 +2,13 @@
 FROM python:3.10-slim
 
 # Set the working directory in the container
-WORKDIR /
+WORKDIR /app
 
 # Copy the requirements.txt file into the root
 COPY requirements.txt .
 
 # Copy the current directory contents into the container at /app as well
-COPY . .
+COPY . /app
 
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
